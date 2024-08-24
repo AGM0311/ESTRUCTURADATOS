@@ -31,10 +31,29 @@ tarea2.forEach(function(array){
     
 })*/
 //funcion flecha
-const tarea3 = [[1,3,5],[8,6,3]]
+/*const tarea3 = [[1,3,5],[8,6,3]]
 
 const leer = (array) => {
     console.log(array.flat().join(','))
 }
-leer(tarea3)
+leer(tarea3)*/
+
 //while
+const tar3 = [[3,4,5],[4,5,2]]
+const leerda = (array) => {
+    let i = 0
+
+    while(i < array.length){
+    let j = 0
+    
+    while(j < array[i].length){
+        
+        console.log(array[i][j])
+        
+        j++
+    }
+
+    i++
+}
+}
+leerda(tar3)
