@@ -22,14 +22,19 @@ for (let i in tarea1){
 }*/
 
 //for each
-const tarea2 = [[1,6,9],[3,6,4]];
+/*const tarea2 = [[1,6,9],[3,6,4]];
 
 tarea2.forEach(function(array){ 
     array.forEach(function(estruct) {
         console.log(estruct);
     })
     
-})
+})*/
 //funcion flecha
+const tarea3 = [[1,3,5],[8,6,3]]
 
+const leer = (array) => {
+    console.log(array.flat().join(','))
+}
+leer(tarea3)
 //while
