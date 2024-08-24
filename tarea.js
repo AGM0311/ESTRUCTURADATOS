@@ -39,7 +39,8 @@ const leer = (array) => {
 leer(tarea3)*/
 
 //while
-const tar3 = [[3,4,5],[4,5,2]]
+
+/*const tar3 = [[3,4,5],[4,5,2]]
 const leerda = (array) => {
     let i = 0
 
@@ -56,4 +57,4 @@ const leerda = (array) => {
     i++
 }
 }
-leerda(tar3)
+leerda(tar3)*/
