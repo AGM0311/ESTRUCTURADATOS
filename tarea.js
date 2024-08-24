@@ -58,3 +58,6 @@ const leerda = (array) => {
 }
 }
 leerda(tar3)*/
+
+/*Hay que quitar las diagonales dependiendo de lo que
+necesites ejecutar.
