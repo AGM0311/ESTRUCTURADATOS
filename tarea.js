@@ -7,7 +7,7 @@ internos*/
 
 for (const valor of tarea.flat()){
     console.log(valor);
-}*/
+}
 
 //for in
 /*const tarea1 = [[4,7,5],[9,8,7]]
@@ -22,14 +22,15 @@ for (let i in tarea1){
 }*/
 
 //for each
-/*const tarea2 = [[1,6,9],[3,6,4]];
+const tarea2 = [[1,6,9],[3,6,4]];
 
 tarea2.forEach(function(array){ 
     array.forEach(function(estruct) {
         console.log(estruct);
     })
     
-})*/
+})
+
 //funcion flecha
 /*const tarea3 = [[1,3,5],[8,6,3]]
 
@@ -39,14 +40,16 @@ const leer = (array) => {
 leer(tarea3)*/
 
 //while
-
-/*const tar3 = [[3,4,5],[4,5,2]]
+/*
+const tar3 = [[3,4,5],[4,5,2]]
 const leerda = (array) => {
+
     let i = 0
 
     while(i < array.length){
-    let j = 0
     
+    let j = 0
+
     while(j < array[i].length){
         
         console.log(array[i][j])
@@ -57,7 +60,7 @@ const leerda = (array) => {
     i++
 }
 }
-leerda(tar3)*/
+leerda(tar3)
 
 /*Hay que quitar las diagonales dependiendo de lo que
 necesites ejecutar*/
