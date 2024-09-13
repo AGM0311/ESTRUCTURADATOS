@@ -42,3 +42,68 @@ function mostrarMenu() {
     console.log("8- Consultar películas rentadas")
     console.log("9- Salida")
 }
+function registrarCliente() {
+    const membresia = parseInt(prompt("Nmero de membresia: "))
+    const nombre = prompt("Nombre: ")
+    const direccion = prompt("Direccion: ")
+    const telefono = parseInt(prompt("Telefono: "))
+    const estado = prompt("Estado (Deudor/Libre de multa): ") //se tiene que escribir identico
+    clientes.push(new Cliente(membresia, nombre, direccion, telefono, estado));
+}
+
+function registrarPelicula() {
+    const numero = parseInt(prompt("Numero: "))
+    const titulo = prompt("Titulo: ");
+    const clasificacion = prompt("Clasificacion: ")
+    const tipo = prompt("Tipo (Estreno/Catalogo): ");
+    peliculas.push(new Pelicula(numero, titulo, clasificacion, tipo));
+}
+
+function mostrar(array, tipo) {
+    if (array.length === 0) {
+        console.log(`No hay ${tipo}.`);
+        return;
+    }
+    array.forEach(item => {
+        console.log(item);
+    });
+}
+
+function baja(array, clave, mensaje) {
+    const id = parseInt(prompt(mensaje));
+    const index = array.findIndex(item => item[clave] === id);
+    if (index !== -1) {
+        array.splice(index, 1);
+        console.log(`${clave} eliminado.`);
+    } else {
+        console.log(`${clave} no encontrado.`);
+    }
+}
+
+function rentaPelicula() {
+    const membresia = parseInt(prompt("Numero de membresia del cliente: "));
+    const numero = parseInt(prompt("Numero de pelicula: "));
+    const cliente = clientes.find(c => c.membresia === membresia);
+    const pelicula = peliculas.find(p => p.numero === numero);
+
+    if (cliente && pelicula && cliente.estado === 'Libre de multa' && pelicula.estado === 'Disponible') {
+        const fechaRenta = new Date();
+        const fechaDevolucion = new Date(fechaRenta);
+        fechaDevolucion.setDate(fechaRenta.getDate() + 3);
+        pelicula.estado = 'Rentada';
+        rentas.push(new Renta(cliente, pelicula, fechaRenta, fechaDevolucion));
+        console.log(`Pelicula rentada hasta: ${fechaDevolucion}`);
+    } else {
+        console.log("No se puede realizar la renta");
+    }
+}
+
+function mostrarRentas() {
+    if (rentas.length === 0) {
+        console.log("No hay rentas registradas.");
+        return;
+    }
+    rentas.forEach(r => {
+        console.log(`Cliente: ${r.cliente.nombre}, Pelicula: ${r.pelicula.titulo}, Fecha de Devolucion: ${r.fechaDevolucion}`);
+    });
+}
