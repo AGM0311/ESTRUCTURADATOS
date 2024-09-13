@@ -107,3 +107,23 @@ function mostrarRentas() {
         console.log(`Cliente: ${r.cliente.nombre}, Pelicula: ${r.pelicula.titulo}, Fecha de Devolucion: ${r.fechaDevolucion}`);
     });
 }
+function menu() {
+    while (true) {
+        mostrarMenu();
+        const opcion = parseInt(prompt("ELIGE LA OPCION QUE MAS TE LLAME LA ATENCION: "));
+        switch (opcion) {
+            case 1: registrarCliente(); break;
+            case 2: mostrar(clientes, 'clientes'); break;
+            case 3: baja(clientes, 'membresia', "Que numero de membresia quieres eliminar?: "); break;
+            case 4: registrarPelicula(); break;
+            case 5: mostrar(peliculas, 'peliculas'); break;
+            case 6: baja(peliculas, 'numero', "Que numero de pelicula quieres eliminar?: "); break;
+            case 7: rentaPelicula(); break;
+            case 8: mostrarRentas(); break;
+            case 9: return;
+            default: console.log("Opcion incorrecta.");
+        }
+    }
+}
+
+menu();
