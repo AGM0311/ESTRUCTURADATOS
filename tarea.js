@@ -7,10 +7,10 @@ internos*/
 
 for (const valor of tarea.flat()){
     console.log(valor);
-}
+}*/
 
 //for in
-/*const tarea1 = [[4,7,5],[9,8,7]]
+const tarea1 = [[4,7,5],[9,8,7]]
 
 for (let i in tarea1){
     let arregloint = tarea1[i]
@@ -19,8 +19,9 @@ for (let i in tarea1){
         //console.log(`elemento en [${i}][${j}] = ${valor} `);
         console.log(valor);
     }
-}*/
+}
 
+/*  
 //for each
 const tarea2 = [[1,6,9],[3,6,4]];
 
@@ -40,7 +41,7 @@ const leer = (array) => {
 leer(tarea3)*/
 
 //while
-/*
+
 const tar3 = [[3,4,5],[4,5,2]]
 const leerda = (array) => {
 
