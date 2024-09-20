@@ -74,7 +74,7 @@ function baja(array, clave, mensaje) {
     const index = array.findIndex(item => item[clave] === id);
     if (index !== -1) {
         array.splice(index, 1);
-        console.log(`${clave} eliminado.`);
+            console.log(`${clave} eliminado.`);
     } else {
         console.log(`${clave} no encontrado.`);
     }
