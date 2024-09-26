@@ -7,7 +7,7 @@ class Alumno {
         this.numControl = numControl;
         this.calificaciones = {};
     }
-
+2263 
     agregarCalificacion(materia, calificacion) {
         if (!this.calificaciones[materia]) {
             this.calificaciones[materia] = [];
