@@ -11,9 +11,9 @@ class Person {
     }
   
     añadir() {
-      let tamaño = parseInt(prompt("Ingrese el número de empleados a agregar: "));
+      let tamaño = parseInt(prompt("Ingrese el número de personas a agregar: "));
       for (let i = 0; i < tamaño; i++) {
-        let nombre = prompt("Ingrese el nombre del empleado: ");
+        let nombre = prompt("Ingrese el nombre: ");
         let edad = prompt("Ingrese la edad: ");
         let sexo = prompt("Ingrese el sexo: ");
         let direccion = prompt("Ingrese la dirección : ");
@@ -25,15 +25,12 @@ class Person {
     }
   
     mostrarEmpleados() {
-      console.log("Empleados:");
+      console.log("Personas:");
       this.array.forEach((persona) => {
-        console.log(`Nombre: ${persona._nombre}, Edad: ${persona._edad}, Sexo: ${persona._sexo}, Dirección: ${persona._direccion}, Teléfono: ${persona._telefono}`);
+        console.log(`Nombre: ${persona._nombre}, Edad: ${persona._edad}, Sexo: ${persona._sexo}, 
+            Dirección: ${persona._direccion}, Teléfono: ${persona._telefono}`);
       });
-    }
-  }
-  
-
+    }}
   let person = new Person();
-  
   person.añadir();
   person.mostrarEmpleados();

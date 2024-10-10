@@ -9,6 +9,7 @@ formDatos.addEventListener("submit", (ev) => {
 
 
     let info = { nombre: nombre, edad: edad, sexo: sexo, rfc: rfc }
-    datoArr.push(info)
+    let infoJSON=JSON.stringify(info);
+    //datoArr.push(info)
     console.log(datoArr);
 })
