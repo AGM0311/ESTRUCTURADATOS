@@ -1,24 +1,32 @@
-import logo from './logo.svg';
+
 import './App.css';
+import Otro from './otro';
+import Formulariocss from './formulariocss';
+import Formularioboot from './componentes/formularioboot';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <>
+    <div className="row">
+    <div className="col-4">
+
     </div>
+    <div className="col-4">
+
+    </div>
+    <div className="col-4">
+    
+    </div>
+    </div>
+    <div className="App">
+     <h1>Hola</h1>
+     <Otro/>
+     <Formulariocss/>
+     <div className="container-fluid p-3">
+     <Formularioboot/>
+    </div>
+    </div>
+    </>
   );
 }
 
